@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyframes percentage</title>
+    <style>
+        body {
+            font-family: helvetica, sans-serif;
+            margin: 5em auto;
+        }
+        .element {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            background-color: #008e9b;
+            animation-name: changer;
+            animation-duration: 5s;
+        }
+        @keyframes changer {
+            30% {
+                transform: scale(.3);
+                background-color: #00be9b;
+                border-radius: 100%;
+            }
+            100% {
+                transform: scale(1.5);
+                background-color: #f9f871;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="element"></div>
+</body>
+</html>
