@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Animation: fill-mode</title>
+    <style>
+        body {
+            background: #8fd5d5;
+        }
+        .bubble {
+            margin-left: 200px;
+            animation-name: roll;
+            animation-duration: 3s;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+        }
+        @keyframes roll {
+            from {
+                transform: translateX(-400px) rotate(0deg) scale(1);
+            }
+            to {
+                transform: translateX(600px) rotate(360deg) scale(.25);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+</body>
+</html>
