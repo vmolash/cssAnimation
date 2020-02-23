@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation delay</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 50px;
+            margin: 100px auto;
+        }
+        .wrap {
+            display: block;
+            margin-bottom: 75px;
+        }
+        .sphere {
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            margin: 10px;
+            transition: margin 2s;
+            background-color: #3cf;
+            position: relative;
+            animation-name: slide;
+            animation-duration: 3s;
+        }
+       
+        .s1 {
+            animation-delay: -2s;
+        }
+        .s2 {
+            background-color: #47dc80;
+            animation-delay: .5s;
+        }
+        .s3 {
+            background-color: #f4e338;
+            animation-delay: 1s;
+        }
+        .s4 {
+            background-color: #f98320;
+            animation-delay: 1.5s;
+        }
+        .s5 {
+            background-color: #da2a79;
+            animation-delay: 2s;
+        }
+        .s6 {
+            background-color: #5943d2;
+            animation-delay: 2.5s;
+        }
+        @keyframes slide {
+            from {
+                left: 0;
+            }
+            to {
+                left: 400px;
+                transform: scale(2);
+                opacity: .5;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="sphere s1"></div>
+        <div class="sphere s2"></div>
+        <div class="sphere s3"></div>
+        <div class="sphere s4"></div>
+        <div class="sphere s5"></div>
+        <div class="sphere s6"></div>
+    </div>
+</body>
+</html>
