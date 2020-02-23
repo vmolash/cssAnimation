@@ -12,42 +12,65 @@
             margin: 100px auto;
         }
         .wrap {
-            width: 200px;
-            height: 200px;
-            margin: 0 20px;
-            background-color: #f5f5f5;
-            border: 1px #aaa solid;
-            border-radius: 5px;
-            box-shadow: 0px 3px 6px rbga(0,0,0,.5);
-            display: inline-block;
+            display: block;
+            margin-bottom: 75px;
         }
-        .box {
-            background-color: rgba(0,221,244,.6);
-            border: 1px #3cf solid;
-            border-radius: 5px;
-            box-sizing: border-box;
-            width: 200px;
-            height: 200px;
-            padding: 20px;
-            text-align: center;
-            /* animation: [animation-name] [animation-duration]; */
-            animation: myAnimation 2250ms;
+        .sphere {
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            margin: 10px;
+            transition: margin 2s;
+            background-color: #3cf;
+            position: relative;
+            animation-name: slide;
+            animation-duration: 2.5s;
         }
-        @keyframes myAnimation {
+       
+        .s1 {
+            animation-timing-function: ease;
+        }
+        .s2 {
+            background-color: #47dc80;
+            animation-timing-function: ease-in;
+        }
+        .s3 {
+            background-color: #f4e338;
+            animation-timing-function: ease-out;
+        }
+        .s4 {
+            background-color: #f98320;
+            animation-timing-function: ease-in-out;
+        }
+        .s5 {
+            background-color: #da2a79;
+            animation-timing-function: linear;
+        }
+        .s6 {
+            background-color: #5943d2;
+            animation-timing-function: cubic-bezier(.3,1.45,.92,.14);
+        }
+        @keyframes slide {
             from {
-                height: 50px;
-                background: #f9f871;
+                left: 0;
             }
             to {
-                height: 350px;
-                background: #1ccc9e;
+                left: 400px;
+                transform: scale(2);
+                opacity: .5;
             }
         }
+
     </style>
 </head>
 <body>
     <div class="wrap">
-        <div class="box">Animation</div>
+        <div class="sphere s1"></div>
+        <div class="sphere s2"></div>
+        <div class="sphere s3"></div>
+        <div class="sphere s4"></div>
+        <div class="sphere s5"></div>
+        <div class="sphere s6"></div>
     </div>
 </body>
 </html>
