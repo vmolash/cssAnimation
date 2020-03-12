@@ -133,6 +133,7 @@ body {
     position: relative;
     bottom: 75px;
     left: -412px;
+    transition: all 400ms ease-in-out;
 }
 .slider figcaption h1 {
     color: #069;
@@ -140,4 +141,10 @@ body {
     font-weight: normal;
     line-height: 60px;
     padding: 0 0 0 10px;
+}
+.slider li.anim:hover figcaption {
+    left: 0;
+}
+.slider:hover li, .slider:hover .progressBar {
+    animation-play-state: paused!important;
 }
