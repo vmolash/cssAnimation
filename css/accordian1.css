@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 8em 1.5 "lucida grande", arial, sans-serif;
+}
+header {
+    text-align: center;
+    margin-bottom: .5em;
+}
+section {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+article {
+    max-width: 600px;
+}
+article:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+article h1 {
+    font-size: 1.2em;
+}
+article a {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    background: linear-gradient(#eaeaea, #ccc);
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    border-bottom: solid 1px #aaa;
+}
+article a:hover, article a:focus {
+    opacity: .8;
+    outline: none;
+}
+article a:active {
+    background: linear-gradient(#ccc, #ddd);
+    color: #069;
+}
+img {
+    max-width: 50%;
+    float: left;
+    padding-right: .5em;
+}
+p {
+    margin: 0 0 0 .5em;
+    height: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    transition: height .3s ease-out, padding .3s ease-out;
+}
+#overview {
+    border-radius: 2px 2px 0 0;
+}
+#dolphin {
+    border-radius: 0 0 3px 3px;
+}
+:target + p {
+    padding: 10px 15px;
+}
+#overview:target + p {
+    height: 200px;
+}
+#turtle:target + p {
+    height: auto;
+}
+#dolphin:target + p {
+    height: auto;
+}
